@@ -1,0 +1,25 @@
+{
+  "name": "boilerplate-selenium-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm-run-all clean build start:server --print-label",
+    "clean": "rimraf build",
+    "build": "tsc -p .",
+    "start:server": "node build/app.js",
+    "watch": "npm-run-all clean build --parallel watch:build watch:server --print-label",
+    "watch:build": "tsc --watch",
+    "watch:server": "nodemon --watch build build/app.js"
+  },
+  "dependencies": {
+    "chromedriver": "81.0.0",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.2",
+    "selenium-webdriver": "4.0.0-alpha.7",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
